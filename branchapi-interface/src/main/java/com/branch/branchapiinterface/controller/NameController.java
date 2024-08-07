@@ -39,17 +39,17 @@ public class NameController {
             throw new RuntimeException("nonce 不正确");
         }
         //时间和当前时间不能超过五分钟
-        // 假定 timestamp 是一个 long 类型的值，代表秒数
-//        long timestamp;
-//        try {
-//            timestamp = Long.parseLong(timestampStr);
-//            if (timestamp - (System.currentTimeMillis() / 1000) > 60 * 5) {
-//                throw new RuntimeException("timestamp 不正确");
-//            }
-//        } catch (NumberFormatException e) {
-//            // 处理 timestampStr 无法解析为 long 的情况
-//            System.err.println("无效的时间戳格式");
-//        }
+        //假定 timestamp 是一个 long 类型的值，代表秒数
+        long timestamplong;
+        try {
+            timestamplong = Long.parseLong(timestamp);
+            if (timestamplong - (System.currentTimeMillis() / 1000) > 60 * 5) {
+                throw new RuntimeException("timestamp 不正确");
+            }
+        } catch (NumberFormatException e) {
+            // 处理 timestampStr 无法解析为 long 的情况
+            System.err.println("无效的时间戳格式");
+        }
 
         //todo 实际情况：从数据库中查询
         String serverSign = SignUtils.getSign(body, "abcdefgh");
@@ -59,4 +59,15 @@ public class NameController {
         return "POST 你的名字是" + user.getUsername();
     }
 
+    public void throwAccessKeyException() {
+        throw new RuntimeException("accessKey 不正确");
+    }
+
+    public void throwNonceException() {
+        throw new RuntimeException("nonce 不正确");
+    }
+
+    public void throwSignException() {
+        throw new RuntimeException("sign 不正确");
+    }
 }
