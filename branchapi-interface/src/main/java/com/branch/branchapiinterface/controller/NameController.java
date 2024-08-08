@@ -56,7 +56,9 @@ public class NameController {
         if (!sign.equals(serverSign)){
             throw new RuntimeException("sign 不正确");
         }
-        return "POST 你的名字是" + user.getUsername();
+        String result = "POST 你的名字是" + user.getUsername();
+        //调用成功后，接口调用次数统计+1
+        return result;
     }
 
     public void throwAccessKeyException() {
