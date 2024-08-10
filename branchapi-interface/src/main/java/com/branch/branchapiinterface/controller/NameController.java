@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/name")
 public class NameController {
 
-    @GetMapping("/")
+    @GetMapping("/get")
     public String getNameByGet(String name, HttpServletRequest request){
         return "GET 你的名字是"+name;
     }
-    @PostMapping("/")
+    @PostMapping("/post")
     public String getNameByPost(@RequestParam String name){
         return "POST 你的名字是"+name;
     }
@@ -56,8 +56,8 @@ public class NameController {
         if (!sign.equals(serverSign)){
             throw new RuntimeException("sign 不正确");
         }
+        //todo 调用成功后，接口调用次数统计+1 invokeCount
         String result = "POST 你的名字是" + user.getUsername();
-        //调用成功后，接口调用次数统计+1
         return result;
     }
 

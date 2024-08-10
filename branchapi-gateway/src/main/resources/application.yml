@@ -1,3 +1,24 @@
-
 server:
   port: 8090
+spring:
+  cloud:
+    gateway:
+        default-filters:
+          - AddRequestHeader=source, Eelex
+        routes:
+          - id: api_route
+            uri: http://localhost:8123
+            predicates:
+              - Path=/api/**
+#        - id: after_route
+#          uri: https://yupi.icu
+#          predicates:
+#            - After=2021-08-20T17:42:47.789-07:00[America/Denver]
+#        - id: after_route
+#            uri: https://yupi.icu
+#            predicates:
+#              - Before=2024-08-20T17:42:47.789-07:00[America/Denver]
+
+logging:  # 日志配置
+  level:
+    org.springframework.cloud.gateway: trace

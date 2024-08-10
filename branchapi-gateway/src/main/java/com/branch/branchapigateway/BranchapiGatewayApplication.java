@@ -12,15 +12,15 @@ public class BranchapiGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(BranchapiGatewayApplication.class, args);
     }
-
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("tobaidu", r -> r.path("/yupi")
-                        .uri("http://yupi.icu/"))
-
-
-
-                .build();
-    }
+//
+//    @Bean
+//    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+//        return builder.routes()
+//                .route("tobaidu", r -> r.path("/yupi")
+//                        .uri("http://yupi.icu/"))
+//
+//
+//
+//                .build();
+//    }
 }
