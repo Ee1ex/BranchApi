@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yupi.project.common.ErrorCode;
 import com.yupi.project.exception.BusinessException;
 import com.yupi.project.mapper.UserInterfaceInfoMapper;
-import com.yupi.project.model.entity.UserInterfaceInfo;
+import com.branch.branchapicommon.model.entity.UserInterfaceInfo;
 import com.yupi.project.service.UserInterfaceInfoService;
 import org.junit.Assert;
 import org.junit.Before;

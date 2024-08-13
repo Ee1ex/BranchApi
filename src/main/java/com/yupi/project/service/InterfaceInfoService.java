@@ -1,7 +1,11 @@
 package com.yupi.project.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yupi.project.model.entity.InterfaceInfo;
+import com.branch.branchapicommon.model.entity.InterfaceInfo;
+import com.branch.branchapicommon.model.entity.InterfaceInfo;
+
+import java.util.List;
 
 /**
 * @author Ee1ex
@@ -10,5 +14,6 @@ import com.yupi.project.model.entity.InterfaceInfo;
 */
 public interface InterfaceInfoService extends IService<InterfaceInfo> {
     void validInterfaceInfo(InterfaceInfo interfaceInfo, boolean add);
+
 
 }
