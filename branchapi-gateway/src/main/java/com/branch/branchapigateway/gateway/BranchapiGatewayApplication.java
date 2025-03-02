@@ -1,4 +1,4 @@
-package com.branch.branchapigateway;
+package com.branch.branchapigateway.gateway;
 
 import com.branch.branchapigateway.provider.DemoService;
 import org.apache.dubbo.config.annotation.DubboReference;

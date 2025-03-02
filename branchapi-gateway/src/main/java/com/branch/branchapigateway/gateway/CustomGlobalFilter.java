@@ -1,4 +1,4 @@
-package com.branch.branchapigateway;
+package com.branch.branchapigateway.gateway;
 
 import com.branch.branchapiclientsdk.utils.SignUtils;
 import com.branch.branchapicommon.model.entity.InterfaceInfo;

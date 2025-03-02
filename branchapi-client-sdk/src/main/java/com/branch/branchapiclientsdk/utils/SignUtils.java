@@ -12,9 +12,9 @@ public class SignUtils {
      * @return
      */
     public static String getSign (String body, String secretKey){
-        Digester md5 = new Digester(DigestAlgorithm.SHA256);
+        Digester com.branch = new Digester(DigestAlgorithm.SHA256);
         String content = body.toString() + "." + secretKey;
-        String digestHex = md5.digestHex(content);
+        String digestHex = com.branch.digestHex(content);
         return digestHex;
     }
 }

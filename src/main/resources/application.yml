@@ -36,9 +36,11 @@ branch:
   client:
     access-key: yupi
     secret-key: abcdefgh
+
 dubbo:
   application:
     name: dubbo-springboot-demo-provider
+    qos-anonymous-access-permission-level: PROTECTED
   protocol:
     name: dubbo
     port: -1
